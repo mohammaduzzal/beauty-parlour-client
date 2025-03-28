@@ -1,4 +1,5 @@
 import Banner from "../homeComponent/Banner";
+import HandleFace from "../homeComponent/HandleFace";
 import Service from "../homeComponent/Service";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <div>
             <Banner/>
             <Service/>
+            <HandleFace/>
         </div>
     );
 };

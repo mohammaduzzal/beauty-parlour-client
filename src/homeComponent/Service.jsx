@@ -25,7 +25,7 @@ const Service = () => {
                         className="rounded-xl w-[42px] h-[42px]" />
                 </figure>
                 <div className="card-body items-center text-center">
-                    <h2 className="card-title">Hair Color & Styleing</h2>
+                    <h2 className="card-title">Hair Color & Styling</h2>
                     <p className="text-pink-400">$99</p>
                     <p>Amazing flyers, social media posts and brand representations that would make your brand stand out.</p>
                 </div>
