@@ -38,7 +38,7 @@ const Signin = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
             <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md transform transition-all duration-500 hover:scale-105">
-                <h2 className="text-2xl md:text-5xl font-bold text-pink-400 text-center my-5 animate-bounce">Signup</h2>
+                <h2 className="text-2xl md:text-5xl font-bold text-pink-400 text-center my-5 animate-bounce">Login</h2>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                    
                     {/* email */}

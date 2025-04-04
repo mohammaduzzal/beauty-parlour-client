@@ -1,8 +1,13 @@
 import { FaGoogle } from "react-icons/fa";
 import useAuth from "../hooks/UseAuth";
 import toast from "react-hot-toast";
+import useAxiosPublic from "../hooks/useAxiosPublic";
+import { useNavigation } from "react-router-dom";
 const SocialLogin = () => {
     const { signinWithGoogle } = useAuth();
+    const axiosPublic = useAxiosPublic();
+    const navigation = useNavigation();
+
 
     const handleGoogle = async () => {
         try {
@@ -11,6 +16,15 @@ const SocialLogin = () => {
             const user = result.user;
             console.log("Google sign-in successful:", user);
             // 2.prepare data for sending to mongodb
+            const userData = {
+                email: user.email,
+                name: user.displayName || "Google User", // Fallback if no displayName
+                firebaseUid: user.uid,
+              };
+              await axiosPublic.post('/users', userData)
+              navigation('/')
+
+
 
             toast.success(`Welcome, ${user.displayName || "User"}! Signed in with Google`)
 
