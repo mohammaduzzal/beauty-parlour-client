@@ -8,6 +8,14 @@ import AuthLayout from "../mainLayout/AuthLayout";
 import Signup from "../pages/Signup";
 import Signin from "../pages/Signin";
 import Error from "../components/Error";
+import Dashboard from "../pages/Dashboard";
+import OrderList from "../dashboardComponent/OrderList";
+import Users from "../dashboardComponent/Users";
+import ManageService from "../dashboardComponent/ManageService";
+import Book from "../dashboardComponent/Book";
+import BookingList from "../dashboardComponent/BookingList";
+import Review from "../dashboardComponent/Review";
+import AddService from "../dashboardComponent/AddService";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +37,42 @@ const router = createBrowserRouter([
             {
                 path:'/contact',
                 element: <Contact></Contact>
+            },
+            {
+                path:'/dashboard',
+                element: <Dashboard></Dashboard>,
+                children:[
+                    // admin
+                    {
+                        path:'/dashboard/orderList',
+                        element:<OrderList/>
+                    },
+                    {
+                        path:'/dashboard/addService',
+                        element:<AddService/>
+                    },
+                    {
+                        path:'/dashboard/users',
+                        element:<Users/>
+                    },
+                    {
+                        path:'/dashboard/manageService',
+                        element:<ManageService/>
+                    },
+                    // normal user
+                    {
+                        path:'/dashboard/book',
+                        element:<Book/>
+                    },
+                    {
+                        path:'/dashboard/bookingList',
+                        element:<BookingList/>
+                    },
+                    {
+                        path:'/dashboard/review',
+                        element:<Review/>
+                    },
+                ]
             },
         ]
     },
