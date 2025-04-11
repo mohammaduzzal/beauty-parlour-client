@@ -16,6 +16,7 @@ import Book from "../dashboardComponent/Book";
 import BookingList from "../dashboardComponent/BookingList";
 import Review from "../dashboardComponent/Review";
 import AddService from "../dashboardComponent/AddService";
+import AdminRoute from "./AdminRoute";
 
 const router = createBrowserRouter([
     {
@@ -45,19 +46,19 @@ const router = createBrowserRouter([
                     // admin
                     {
                         path:'/dashboard/orderList',
-                        element:<OrderList/>
+                        element:<AdminRoute><OrderList/></AdminRoute>
                     },
                     {
                         path:'/dashboard/addService',
-                        element:<AddService/>
+                        element:<AdminRoute><AddService/></AdminRoute>
                     },
                     {
                         path:'/dashboard/users',
-                        element:<Users/>
+                        element:<AdminRoute><Users/></AdminRoute>
                     },
                     {
                         path:'/dashboard/manageService',
-                        element:<ManageService/>
+                        element:<AdminRoute><ManageService/></AdminRoute>
                     },
                     // normal user
                     {

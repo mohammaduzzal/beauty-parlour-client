@@ -2,11 +2,12 @@ import { FaGoogle } from "react-icons/fa";
 import useAuth from "../hooks/UseAuth";
 import toast from "react-hot-toast";
 import useAxiosPublic from "../hooks/useAxiosPublic";
-import { useNavigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const SocialLogin = () => {
     const { signinWithGoogle } = useAuth();
     const axiosPublic = useAxiosPublic();
-    const navigation = useNavigation();
+    const navigate = useNavigate()
+    
 
 
     const handleGoogle = async () => {
@@ -22,11 +23,9 @@ const SocialLogin = () => {
                 firebaseUid: user.uid,
               };
               await axiosPublic.post('/users', userData)
-              navigation('/')
-
-
-
             toast.success(`Welcome, ${user.displayName || "User"}! Signed in with Google`)
+            navigate('/')
+
 
         } catch (error) {
             console.error("Google sign-in error:", error.message || error);

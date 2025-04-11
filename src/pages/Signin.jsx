@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SocialLogin from "../components/SocialLogin";
 import useAuth from "../hooks/UseAuth";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
 const Signin = () => {
-
+    const navigate = useNavigate()
     const { signInUser } = useAuth();
     const {
         register, //register input field
@@ -25,7 +25,7 @@ const Signin = () => {
             // 2.sent data to db
 
             toast.success("Signin successful!")
-
+            navigate('/')
 
         } catch (error) {
             // Step 4: Handle errors (Firebase or Axios)
