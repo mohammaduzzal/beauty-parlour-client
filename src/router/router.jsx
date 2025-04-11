@@ -3,7 +3,6 @@ import MainLayout from "../mainLayout/MainLayout";
 import Home from "../pages/Home";
 import Portfolio from "../pages/Portfolio";
 import Team from "../pages/Team";
-import Contact from "../pages/Contact";
 import AuthLayout from "../mainLayout/AuthLayout";
 import Signup from "../pages/Signup";
 import Signin from "../pages/Signin";
@@ -17,6 +16,8 @@ import BookingList from "../dashboardComponent/BookingList";
 import Review from "../dashboardComponent/Review";
 import AddService from "../dashboardComponent/AddService";
 import AdminRoute from "./AdminRoute";
+import AllServices from "../pages/AllServices";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -36,8 +37,8 @@ const router = createBrowserRouter([
                 element: <Team></Team>
             },
             {
-                path:'/contact',
-                element: <Contact></Contact>
+                path:'/allServices',
+                element: <PrivateRoute><AllServices></AllServices></PrivateRoute>
             },
             {
                 path:'/dashboard',
