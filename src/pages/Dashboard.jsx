@@ -60,7 +60,7 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/review">Review</NavLink>
+                <NavLink to="/dashboard/review"   className={({ isActive }) => (isActive ? "text-pink-600" : "")}>Review</NavLink>
               </li>
             </>
           )}
