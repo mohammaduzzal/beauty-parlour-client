@@ -80,7 +80,7 @@ const Users = () => {
                     <tbody>
                         {
                             users.map((user, idx) => (
-                                <>
+                              
                                     <tr key={user._id}>
                                         <th>{idx + 1}</th>
                                         <td>{user.name}</td>
@@ -98,7 +98,7 @@ const Users = () => {
                                             className="btn btn-ghost btn-lg "><FaTrashAlt className="text-red-600"></FaTrashAlt></button></td>
                                     </tr>
 
-                                </>
+                               
                             ))
                         }
                     </tbody>

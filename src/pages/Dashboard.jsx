@@ -29,16 +29,16 @@ const Dashboard = () => {
           {isAdmin ? (
             <>
               <li>
-                <NavLink to="/dashboard/orderList">Order List</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? "text-pink-600" : "")} to="/dashboard/orderList">Order List</NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/addService">Add Service</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? "text-pink-600" : "")} to="/dashboard/addService">Add Service</NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/users">Make Admin</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? "text-pink-600" : "")} to="/dashboard/users">Make Admin</NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/manageService">Manage Service</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? "text-pink-600" : "")} to="/dashboard/manageService">Manage Service</NavLink>
               </li>
             </>
           ) : (

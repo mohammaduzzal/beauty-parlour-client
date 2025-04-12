@@ -18,6 +18,7 @@ import AddService from "../dashboardComponent/AddService";
 import AdminRoute from "./AdminRoute";
 import AllServices from "../pages/AllServices";
 import PrivateRoute from "./PrivateRoute";
+import UpdateService from "../components/UpdateService";
 
 const router = createBrowserRouter([
     {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
                     {
                         path:'/dashboard/manageService',
                         element:<AdminRoute><ManageService/></AdminRoute>
+                    },
+                    {
+                        path:'/dashboard/updateService/:id',
+                        element:<AdminRoute><UpdateService/></AdminRoute>
                     },
                     // normal user
                     {

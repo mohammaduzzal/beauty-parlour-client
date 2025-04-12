@@ -29,6 +29,7 @@ const AddService = () => {
 
     return (
         <div className="max-w-lg mx-auto p-6 bg-gray-50 rounded-xl shadow-sm">
+           <h2 className="text-center my-3 text-pink-600 font-bold text-2xl md:text-4xl">Add a Service</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
         <fieldset className="fieldset mb-6 border border-gray-200 rounded-lg p-4">
           <legend className="fieldset-legend text-sm font-medium text-gray-700 px-2">Service Title</legend>
