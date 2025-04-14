@@ -43,7 +43,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'/dashboard',
-                element: <Dashboard></Dashboard>,
+                element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
                 children:[
                     // admin
                     {
@@ -67,10 +67,10 @@ const router = createBrowserRouter([
                         element:<AdminRoute><UpdateService/></AdminRoute>
                     },
                     // normal user
-                    {
-                        path:'/dashboard/book',
-                        element:<Book/>
-                    },
+                    // {
+                    //     path:'/dashboard/book/',
+                    //     element:<Book/>
+                    // },
                     {
                         path:'/dashboard/bookingList',
                         element:<BookingList/>

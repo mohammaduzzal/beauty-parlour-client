@@ -1,15 +1,42 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../hooks/useAxiosPublic";
+import useAuth from "../hooks/UseAuth";
+import Swal from "sweetalert2";
+import { useState } from "react";
 
 const AllServices = () => {
+    const [bookedService, setBookedService] = useState([])
+    const {user} = useAuth()
     const axiosPublic = useAxiosPublic()
-    const { data: services = [], refetch } = useQuery({
+    const { data: services = [] } = useQuery({
         queryKey: ['services'],
         queryFn: async () => {
             const { data } = await axiosPublic.get('/services')
             return data;
         }
     })
+
+    const handleBooking = async(id,title,image) =>{
+        const payload = {
+            name: user?.displayName,
+            email: user?.email,
+            service_id : id,
+            service_title : title,
+            service_image:image,
+            status : 'pending'
+
+        }
+        try{
+            await axiosPublic.post('/booked', payload)
+        Swal.fire('booked successfully!')
+        // update local state
+        setBookedService((pre) =>[...pre,id])
+
+        }catch(error){
+            console.log('booking failed', error);
+        }
+
+    }
 
 
     // console.log(services);
@@ -46,7 +73,12 @@ const AllServices = () => {
                                 <p className="text-pink-600">Price : {service.price}</p>
                                 <p>{service.description}</p>
                                 <div className="card-actions">
-                                    <button className="btn btn-primary bg-pink-600">Book Now</button>
+                                    <button onClick={()=> handleBooking(service._id,service.title,service.image)}  
+                                    className="btn btn-primary bg-pink-600"
+                                    disabled={bookedService.includes(service._id)}
+                                    >
+                                        {bookedService.includes(service._id) ? "Booked" : "Book Now"}
+                                    </button>
                                 </div>
                             </div>
                         </div>

@@ -13,11 +13,11 @@ const Navbar = () => {
 
 
   const links = <>
-  <li><NavLink to='/' className='hover:text-pink-500'>Home</NavLink></li>
-  <li><NavLink to='/portfolio' className='hover:text-pink-500'>Our Portfolio</NavLink></li>
-  <li><NavLink to='/team' className='hover:text-pink-500'>Our Team</NavLink></li>
- {user &&  <li><NavLink to='/allServices' className='hover:text-pink-500'>All Services</NavLink></li>}
-  <li><NavLink to='/dashboard' className='hover:text-pink-500'>Dashboard</NavLink></li>
+  <li><NavLink to='/'  className={({ isActive }) => (isActive ? "text-pink-600" : "")}>Home</NavLink></li>
+  <li><NavLink to='/portfolio'  className={({ isActive }) => (isActive ? "text-pink-600" : "")}>Our Portfolio</NavLink></li>
+  <li><NavLink to='/team'  className={({ isActive }) => (isActive ? "text-pink-600" : "")}>Our Team</NavLink></li>
+ {user &&  <li><NavLink to='/allServices'  className={({ isActive }) => (isActive ? "text-pink-600" : "")}>All Services</NavLink></li>}
+  {user && <li><NavLink to='/dashboard'  className={({ isActive }) => (isActive ? "text-pink-600" : "")}>Dashboard</NavLink></li>}
   </>
 
 

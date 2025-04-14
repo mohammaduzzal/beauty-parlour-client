@@ -30,7 +30,7 @@ const Service = () => {
                                 <p className="text-pink-600">Price : {limitedService.price}</p>
                                 <p>{limitedService.description}</p>
                                 <div className="card-actions">
-                                    <button className="btn btn-error bg-pink-400">Book Now</button>
+                                    <Link className="btn btn-error bg-pink-400">Book Now</Link>
                                 </div>
                             </div>
                         </div>

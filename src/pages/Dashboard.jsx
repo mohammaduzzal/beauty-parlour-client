@@ -43,14 +43,14 @@ const Dashboard = () => {
             </>
           ) : (
             <>
-              <li>
+              {/* <li>
                 <NavLink
                   className={({ isActive }) => (isActive ? "text-pink-600" : "")}
                   to="/dashboard/book"
                 >
                   Book
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink
                   className={({ isActive }) => (isActive ? "text-pink-600" : "")}
