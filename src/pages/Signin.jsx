@@ -83,6 +83,7 @@ const Signin = () => {
                             </Link>
                         </p>
                     </div>
+                    <p className="bg-pink-600">admin info : <span>email : bright@bb.com</span> pass : 123456</p>
                 </form>
             </div>
         </div>
