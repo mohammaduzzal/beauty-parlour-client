@@ -27,7 +27,7 @@ const Signup = () => {
             //1.create user in firebase
             const result = await createUser(email, password)
             const user = result.user;
-            console.log(user);
+            // console.log(user);
             // 2.sent data to db
             const userInfo = {
                 name,
@@ -44,7 +44,7 @@ const Signup = () => {
 
         } catch (error) {
             // Step 4: Handle errors (Firebase or Axios)
-            console.error("Error during signup:", error.message || error);
+            // console.error("Error during signup:", error.message || error);
             toast.error("Signup failed: " + (error.message || "Something went wrong"));
         }
     }

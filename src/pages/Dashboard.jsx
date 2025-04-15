@@ -11,7 +11,7 @@ const Dashboard = () => {
   const handleLogout = () => {
     logout()
       .then(() => navigate("/"))
-      .catch((err) => console.error("Logout error:", err));
+      .catch((err) => {});
   };
 
   if (loading || isAdminLoading) {

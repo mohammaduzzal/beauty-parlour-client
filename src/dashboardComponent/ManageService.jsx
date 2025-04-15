@@ -38,7 +38,7 @@ const ManageService = () => {
             refetch();
 
           }catch(error){
-            console.error("Error deleting service:", error.response?.data || error.message);
+            // console.error("Error deleting service:", error.response?.data || error.message);
         Swal.fire({
           title: "Error!",
           text: error.response?.data?.message || "Failed to delete service.",

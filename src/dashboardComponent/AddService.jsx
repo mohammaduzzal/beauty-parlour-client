@@ -12,13 +12,13 @@ const AddService = () => {
         ...data,
         price : Number(data.price)
       }
-      console.log(payload);
+      // console.log(payload);
       await axiosSecure.post('/services', payload)
       Swal.fire("Service added successfully!")
       reset();
 
     }catch(error){
-      console.error("Error adding service:", error.response?.data || error.message);
+      // console.error("Error adding service:", error.response?.data || error.message);
       Swal.fire("Failed to add service.");
     }
   }

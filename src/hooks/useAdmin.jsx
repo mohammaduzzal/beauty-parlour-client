@@ -15,7 +15,7 @@ const useAdmin = () => {
         }
     })
     if (error) {
-        console.error("useAdmin query error:", error);
+        // console.error("useAdmin query error:", error);
     }
 
     // console.log(isAdmin);

@@ -4,7 +4,7 @@ A full-featured web application for a beauty parlour where users can book servic
 
 ## 🚀 Live Site
 
-[🔗 Visit Live Website](https://your-live-site-url.com) 
+[🔗 Visit Live Website](https://beauty-parlour-cd47d.web.app) 
 
 ---
 

@@ -46,7 +46,7 @@ const UpdateService = () => {
       Swal.fire("Service updated successfully!");
       navigate('/dashboard/manageService')
     }catch(error){
-      console.error("Error updating service:", error.response?.data || error.message);
+      // console.error("Error updating service:", error.response?.data || error.message);
       Swal.fire("Failed to update service.");
     }
 

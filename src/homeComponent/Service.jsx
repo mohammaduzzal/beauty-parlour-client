@@ -30,7 +30,7 @@ const Service = () => {
             Swal.fire('booked successfully!')
             
         } catch (error) {
-            console.log('booking failed', error);
+            // console.log('booking failed', error);
         }
     }
 

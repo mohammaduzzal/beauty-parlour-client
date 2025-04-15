@@ -18,7 +18,7 @@ const Testimonial = () => {
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat',
             rating: 5,
-            image: '/src/assets/images/Ellipse 90.png',
+            image: 'https://i.ibb.co.com/Q7XF04yr/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confide.jpg',
         },
         {
             name: 'Miriam Barron',
@@ -26,7 +26,7 @@ const Testimonial = () => {
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat',
             rating: 5,
-            image: '/src/assets/images/Ellipse 91.png',
+            image: 'https://i.ibb.co.com/fGFncLQn/1000-F-76275384-m-RNrm-AI89-UPWo-We-UJf-CL9-Cpt-Rxg3c-Eo-F.jpg',
         },
         {
             name: 'Bria Malone',
@@ -34,7 +34,7 @@ const Testimonial = () => {
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat',
             rating: 5,
-            image: '/src/assets/images/Ellipse 92.png',
+            image: 'https://i.ibb.co.com/hJMfJVCh/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair-285396-896.jpg',
         },
         {
             name: 'Nash Patrik',
@@ -42,7 +42,7 @@ const Testimonial = () => {
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat',
             rating: 5,
-            image: '/src/assets/images/Ellipse 90.png',
+            image: 'https://i.ibb.co.com/Q7XF04yr/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confide.jpg',
         },
         {
             name: 'Miriam Barron',
@@ -50,7 +50,7 @@ const Testimonial = () => {
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat',
             rating: 5,
-            image: '/src/assets/images/Ellipse 91.png',
+            image: 'https://i.ibb.co.com/fGFncLQn/1000-F-76275384-m-RNrm-AI89-UPWo-We-UJf-CL9-Cpt-Rxg3c-Eo-F.jpg',
         },
         {
             name: 'Bria Malone',
@@ -58,7 +58,7 @@ const Testimonial = () => {
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat',
             rating: 5,
-            image: '/src/assets/images/Ellipse 92.png',
+            image: 'https://i.ibb.co.com/hJMfJVCh/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair-285396-896.jpg',
         },
     ];
 

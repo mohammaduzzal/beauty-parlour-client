@@ -21,7 +21,7 @@ const Signin = () => {
             //1.create user in firebase
             const result = await signInUser(email, password)
             const user = result.user;
-            console.log(user);
+            // console.log(user);
             // 2.sent data to db
 
             toast.success("Signin successful!")
@@ -29,7 +29,7 @@ const Signin = () => {
 
         } catch (error) {
             // Step 4: Handle errors (Firebase or Axios)
-            console.error("Error during signin:", error.message || error);
+            // console.error("Error during signin:", error.message || error);
             toast.error("Signin failed: " + (error.message || "Something went wrong"));
         }
     }

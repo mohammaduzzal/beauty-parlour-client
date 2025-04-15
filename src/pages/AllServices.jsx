@@ -33,7 +33,7 @@ const AllServices = () => {
         setBookedService((pre) =>[...pre,id])
 
         }catch(error){
-            console.log('booking failed', error);
+            // console.log('booking failed', error);
         }
 
     }

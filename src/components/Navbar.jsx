@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../hooks/UseAuth";
+import logo from '../../public/logo.png'
 
 const Navbar = () => {
   const {user,logout} = useAuth();
@@ -7,7 +8,7 @@ const Navbar = () => {
     logout()
     .then(()=>{})
     .catch(err =>{
-      console.log(err);
+      // console.log(err);
     })
   }
 
@@ -37,7 +38,7 @@ const Navbar = () => {
       </ul>
     </div>
     <div>
-      <img className="w-[50px] h-[25px] md:w-[100px] md:h-[50px]" src={'/public/logo.png'} alt="" />
+      <img className="w-[50px] h-[25px] md:w-[100px] md:h-[50px]" src={logo} alt="" />
     </div>
   </div>
   <div className="navbar-center hidden lg:flex">

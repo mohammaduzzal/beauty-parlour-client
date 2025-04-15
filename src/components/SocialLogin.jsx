@@ -15,7 +15,7 @@ const SocialLogin = () => {
             // Step 1: Sign in with Google via Firebase
             const result = await signinWithGoogle();
             const user = result.user;
-            console.log("Google sign-in successful:", user);
+            // console.log("Google sign-in successful:", user);
             // 2.prepare data for sending to mongodb
             const userData = {
                 email: user.email,
@@ -28,7 +28,7 @@ const SocialLogin = () => {
 
 
         } catch (error) {
-            console.error("Google sign-in error:", error.message || error);
+            // console.error("Google sign-in error:", error.message || error);
             toast.error("Google sign-in failed: " + (error.message || "Something went wrong"));
         }
     }
